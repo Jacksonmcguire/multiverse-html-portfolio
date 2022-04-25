@@ -1,0 +1,156 @@
+
+  * {
+    color: blue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    list-style-type: none;
+  }
+
+main {
+  display: flex;
+  flex-direction: column;
+  /* height: 100%; */
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav {
+  /* display: flex; */
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 1.1em;
+}
+
+.home {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+  align-items: center;
+}
+
+.home article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.contact-circle {
+  border: 1px solid;
+  border-radius: 50%;
+  height: 10em;
+  width:10em ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bio {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.bio-desc {
+  border-right: 1px solid;
+  padding:5px; 
+}
+
+.bio h3 {
+  border-bottom: 1px solid;
+  text-align: center;
+  width: 50%;
+}
+
+.bio li {
+  margin: 3px;
+  /* padding: 2px; */
+}
+.bio ul {
+  padding: 5px;
+}
+
+.exp {
+  display: flex;
+  flex-direction: column;
+}
+.exp ul {padding: 0;}
+
+.exp-item {
+  border: 1px solid;
+  border-radius: 2px;
+  margin: 5px;
+  text-align: center;
+}
+
+.projects {
+  width: 100%;;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.projects li {
+  display: grid;
+  margin: 50px 0;
+  border-radius: 2px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+
+  padding: 5px;
+}
+
+.projects img {
+  opacity: .7;
+  width: 100%;
+}
+
+.projects li p {
+  /* height: 100%; */
+  margin: 0;
+  overflow-y: scroll;
+}
+
+@media screen and (min-width: 500px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .home {
+    grid-area: 1 / 1 / 2 / 3;
+    justify-self: center;
+  }
+
+  .home article {
+    margin: 50px;
+  }
+
+  .bio {
+    width: 50%;
+    justify-self: center;
+  }
+  
+  .bio-desc {
+    margin: 15px;
+    text-align: center;
+  }
+
+  .exp {
+    text-align: center;
+  }
+
+  .work {
+    grid-area: 3 / 1 / 4 / 3;
+  }
+
+}
