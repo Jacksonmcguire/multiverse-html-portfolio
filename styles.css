@@ -1,29 +1,33 @@
 /* Colors: 
-light green - 606C38
-dark green - 283618
-white - FEFAE0
-light brown - DDA15E
-brown - BC6C25
+lavendar - 9381FF
+lighter lavendar - B8B8FF
+white - F8F7FF
+tan - FFEEDD
+peach - FFD8BE
 */
 
 
 * {
-    color: #BC6C25;
+    color: #F8F7FF;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     list-style-type: none;
-    background-color: #FEFAE0;
+}
+
+body {
+  background-color: #9381FF;
+  margin: 0;
 }
 
 main {
   display: flex;
   flex-direction: column;
-  /* height: 100%; */
 }
 
 header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border-bottom: 1px solid #F8F7FF;
 }
 
 h1 {
@@ -33,19 +37,25 @@ h1 {
 nav {
   width: 75%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 nav a {
   font-size: 1.2em;
+  text-decoration: none;
+}
+
+nav a:first-child {
+  display: none
 }
 
 
 .home {
   display: flex;
   justify-content: space-around;
-  margin: 10px 0;
+  margin: 10px 5px;
   align-items: center;
+  width: 100%;
 }
 
 .home article {
@@ -55,8 +65,8 @@ nav a {
 }
 
 .profile {
-  height: 200px;
-  width: 200px;
+  height: 175px;
+  width: 175px;
   border-radius: 50%;
   margin-bottom: -40px;
 }
@@ -70,13 +80,12 @@ nav a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #BC6C25;
-  /* color: #283618 */
+  background-color: #B8B8FF;
 }
 
 .contact-circle p, .contact-circle img {
-  background-color: #BC6C25;
-  color: #FEFAE0
+  background-color: #B8B8FF;
+  color: #F8F7FF
 }
 
 .contact-circle img:hover {
@@ -85,28 +94,33 @@ nav a {
 }
 
 .bio {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #B8B8FF;
+  height: fit-content;
+  align-self: center;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .bio-desc {
   border-right: 1px solid;
   padding:5px; 
+  justify-self: center;
 }
 
 .bio h3 {
   border-bottom: 1px solid;
   text-align: center;
-  width: 50%;
+  width: 70%;
 }
 
 .bio li {
   margin: 3px;
-  /* padding: 2px; */
 }
 .bio ul {
   padding: 5px;
+  justify-self: center;
 }
 
 .exp {
@@ -117,9 +131,14 @@ nav a {
 
 .exp-item {
   border: 1px solid;
-  border-radius: 2px;
-  margin: 5px;
+  border-radius: 5px;
+  margin: 10px;
   text-align: center;
+  background-color: #F8F7FF;
+  color: #9381FF;
+}
+.exp p {
+  color: #9381FF
 }
 
 .projects {
@@ -148,43 +167,159 @@ nav a {
 }
 
 .projects li p {
-  /* height: 100%; */
   margin: 0;
   overflow-y: scroll;
 }
 
 @media screen and (min-width: 500px) {
   main {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 100px;
+    max-width: 100%;
+  }
+
+  nav a {
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  nav a:first-child {
+    display: block
   }
 
   .home {
-    grid-area: 1 / 1 / 2 / 3;
-    justify-self: center;
+    grid-area: 1 / 1 / 2 / 2;
+    align-self: flex-end;
+    background-color: #FFD8BE;
+    width: 75%;
+    height: 0;
+    padding: 40% 0 35%;
+    border-radius: 50%;
   }
 
-  .home article {
+  .contact-circle {
+    width: 75%;
+    height: 0;
+    padding: 40% 0 35%;
+  }
+
+  .profile {
+    height: 200px;
+    width: 200px;
+  }
+
+  .home article, h2 {
     margin: 50px;
+    color: #9381FF
   }
 
   .bio {
-    width: 70%;
+    margin-top: -10em;
+    align-self: flex-start;
+    width: 75%;
+    height: 0;
+    padding-bottom: 60%;
+    padding-top: 15%;
+    border-radius: 50%;
     justify-self: center;
-    display: flex;
+    display: grid; 
+    flex-direction: column;
+    align-items: center;
   }
   
   .bio-desc {
-    margin: 15px;
+    padding-right: 25px;
+    border-right: none;
+    width: 18em;
+    height: 18em;
+    border-radius: 50%;
+    background-color: #FFD8BE;
+    justify-self: center;
+    text-align: center;
+    padding: 50px;
+    margin-bottom: 50px;
+  }
+
+  .bio-desc p {
+    color: #9381FF;
+  }
+
+  .bio-desc h3 {
+    color: #9381FF;
+    width: 100%;
+    font-size: 2em;
+    font-weight: 800;
+    border-bottom: none;
+  }
+
+  .bio ul {
+    width: 20.5em;
+    height: 20.5em;
+    justify-self: center;
+    background-color: #9381FF;
+    margin: 125px 0 0 -50px;
+    border: 1px solid #FFEEDD;
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  .bio ul h3 {
+    border-bottom: none;
+    text-align: center;
+    width: 100%;
   }
 
   .exp {
     text-align: center;
+    align-self: center;
+    position: relative;
+    width: 75%;
+    height: 0;
+    padding-bottom: 70%;
+    padding-top: 5%;
+    border-radius: 50%;
+    background-color: #FFD8BE;
+    flex-direction: row;
   }
 
-  .work {
-    grid-area: 3 / 1 / 4 / 3;
+  .education li, .education li p  {
+    background-color: #9381FF;
+    color: #F8F7FF
   }
 
+  .jobs li, .jobs li p {
+    background-color: #B8B8FF;
+    color: #F8F7FF
+  }
+
+  .jobs h3 {
+    color: #9381FF;
+    font-size: 1.5em;
+  }
+
+  .education h3 {
+    color: #9381FF;
+    font-size: 1.5em;
+  }
+
+  .exp-item {
+    font-weight: 600;
+    width: 75%;
+    height: 0;
+    padding: 35% 10px 40%;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .projects li {
+    width: 75%;
+    align-self: center;
+  }
 }
