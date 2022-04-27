@@ -171,6 +171,16 @@ nav a:first-child {
   overflow-y: scroll;
 }
 
+footer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+footer img {
+  width: 48px;
+}
+
 @media screen and (min-width: 500px) {
   main {
     display: flex;
@@ -206,8 +216,8 @@ nav a:first-child {
   }
 
   .profile {
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
   }
 
   .home article, h2 {
@@ -273,15 +283,25 @@ nav a:first-child {
 
   .exp {
     text-align: center;
-    align-self: center;
+    align-self: flex-end;
     position: relative;
-    width: 75%;
+    margin-top: -10em;
+    width: 90%;
     height: 0;
     padding-bottom: 70%;
-    padding-top: 5%;
+    padding-top: 20%;
     border-radius: 50%;
     background-color: #FFD8BE;
     flex-direction: row;
+    /* justify-content: center; */
+    /* align-items: flex-start; */
+  }
+
+  .exp h3 {
+    /* color: #FFD8BE; */
+    /* background-color: #B8B8FF;  */
+    /* border: ; */
+    /* width: 100% */
   }
 
   .education li, .education li p  {
@@ -295,20 +315,29 @@ nav a:first-child {
   }
 
   .jobs h3 {
-    color: #9381FF;
+    color: #B8B8FF;
     font-size: 1.5em;
+    width: 50%;
+  }
+
+  .education, .jobs {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .education h3 {
     color: #9381FF;
     font-size: 1.5em;
+    width: 50%;
   }
 
   .exp-item {
     font-weight: 600;
-    width: 75%;
+    width: 60%;
     height: 0;
-    padding: 35% 10px 40%;
+    padding: 25% 10px 35%;
     border-radius: 50%;
     text-align: center;
     display: flex;
@@ -316,6 +345,7 @@ nav a:first-child {
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
+    margin-right: 0;
   }
 
   .projects li {
